@@ -1,12 +1,10 @@
 class Stage {
     base: BaseStage;
     type: string;
-    is_higher: boolean;
 
-    constructor(base: BaseStage, type: string, higher: boolean) {
+    constructor(base: BaseStage, type: string) {
         this.base = base;
         this.type = type;
-        this.is_higher = higher;
     }
 }
 
@@ -19,5 +17,5 @@ enum BaseStage {
     ChristmasTown,
     TheKAC8thQualifier,
     TheKAC8thFinals,
-    CastleOfAqua,
+    CastleOfAquaBlue,
 }

@@ -1,4 +1,7 @@
 abstract class JsonRecordReader implements RecordReader {
+    abstract readAll(): Promise<WarRecord[]>;
+    abstract read(lower: Date, upper: Date): Promise<WarRecord[]>;
+
     filter(records: any[], lower: Date = new Date(0), upper: Date = new Date()): WarRecord[] {
         const filtered = records
             .filter((r: any) => lower <= r.date && r.date <= upper)
