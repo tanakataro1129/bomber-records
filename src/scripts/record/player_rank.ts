@@ -3,8 +3,8 @@ class PlayerRank {
     rank_level: RankLevel;
 
     constructor(cls: RankClass, lv: RankLevel) {
-        this.rank_class = (cls)? cls : RankClass.Unknown;
-        this.rank_level = (lv)? lv : RankLevel.Unknown;
+        this.rank_class = (cls) ? cls : RankClass.Unknown;
+        this.rank_level = (lv) ? lv : RankLevel.Unknown;
     }
 }
 
@@ -20,7 +20,7 @@ enum RankClass {
 
 namespace RankClass {
     export function name(rank_class: RankClass) {
-        switch(rank_class) {
+        switch (rank_class) {
             case RankClass.Beginner:
                 return "Beginner";
             case RankClass.Rookie:

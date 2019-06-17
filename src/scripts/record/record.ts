@@ -1,7 +1,7 @@
 class WarRecord {
     date: Date;
     register_date: Date;
-    charactor : Girl;
+    charactor: Girl;
     stage: Stage;
     rank: PlayerRank;
     victory: Victory;
