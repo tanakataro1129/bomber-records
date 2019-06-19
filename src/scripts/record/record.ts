@@ -1,14 +1,19 @@
-class WarRecord {
-    date: Date;
-    register_date: Date;
-    charactor: Girl;
-    stage: Stage;
-    rank: PlayerRank;
-    victory: Victory;
+import { Girl } from '../girl/girl';
+import { Stage } from './stage';
+import { PlayerRank } from './player_rank';
+import { Victory } from './victory';
 
-    constructor(date: Date, register_d: Date, ch: Girl, stage: Stage, rank: PlayerRank, victory: Victory) {
+export class WarRecord {
+    public date: Date;
+    public registerDate: Date;
+    public charactor: Girl;
+    public stage: Stage;
+    public rank: PlayerRank;
+    public victory: Victory;
+
+    constructor(date: Date, registerDate: Date, ch: Girl, stage: Stage, rank: PlayerRank, victory: Victory) {
         this.date = date;
-        this.register_date = register_d;
+        this.registerDate = registerDate;
         this.charactor = ch;
         this.stage = stage;
         this.rank = rank;

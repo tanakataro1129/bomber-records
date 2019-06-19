@@ -1,14 +1,14 @@
-class PlayerRank {
-    rank_class: RankClass;
-    rank_level: RankLevel;
+export class PlayerRank {
+    public rankClass: RankClass;
+    public rankLevel: RankLevel;
 
     constructor(cls: RankClass, lv: RankLevel) {
-        this.rank_class = (cls) ? cls : RankClass.Unknown;
-        this.rank_level = (lv) ? lv : RankLevel.Unknown;
+        this.rankClass = (cls) ? cls : RankClass.Unknown;
+        this.rankLevel = (lv) ? lv : RankLevel.Unknown;
     }
 }
 
-enum RankClass {
+export enum RankClass {
     Unknown,
     Beginner,
     Rookie,
@@ -18,28 +18,7 @@ enum RankClass {
     Master,
 }
 
-namespace RankClass {
-    export function name(rank_class: RankClass) {
-        switch (rank_class) {
-            case RankClass.Beginner:
-                return "Beginner";
-            case RankClass.Rookie:
-                return "Rookie";
-            case RankClass.Regular:
-                return "Regular";
-            case RankClass.Star:
-                return "Star";
-            case RankClass.SuperStar:
-                return "SuperStar";
-            case RankClass.Master:
-                return "Master";
-            default:
-                return "Unknown";
-        }
-    }
-}
-
-enum RankLevel {
+export enum RankLevel {
     Unknown,
     C,
     B,

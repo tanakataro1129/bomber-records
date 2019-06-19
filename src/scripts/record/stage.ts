@@ -1,6 +1,6 @@
-class Stage {
-    base: BaseStage;
-    type: string;
+export class Stage {
+    public base: BaseStage;
+    public type: string;
 
     constructor(base: BaseStage, type: string) {
         this.base = base;
@@ -8,7 +8,7 @@ class Stage {
     }
 }
 
-enum BaseStage {
+export enum BaseStage {
     BomTown,
     PanicIsland,
     CyberSpace,

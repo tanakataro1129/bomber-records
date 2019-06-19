@@ -1,5 +1,8 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import { _stages } from './assets/constants/stages';
+import { _girls } from './assets/constants/girls';
+import { _player_ranks } from './assets/constants/player_ranks';
 
 Vue.use(Vuex);
 

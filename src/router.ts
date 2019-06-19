@@ -1,10 +1,10 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 
-import Home from './views/Home.vue'
-import AddRecord from './views/AddRecord.vue'
-import SearchRecords from './views/SearchRecords.vue'
-import Analysis from './views/Analysis.vue'
+import Home from './views/Home.vue';
+import AddRecord from './views/AddRecord.vue';
+import SearchRecords from './views/SearchRecords.vue';
+import Analysis from './views/Analysis.vue';
 
 Vue.use(Router);
 
@@ -15,22 +15,22 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: Home,
     },
     {
       path: '/add-record',
       name: 'add-record',
-      component: AddRecord
+      component: AddRecord,
     },
     {
       path: '/search-records',
       name: 'search-records',
-      component: SearchRecords
+      component: SearchRecords,
     },
     {
       path: '/analysis',
       name: 'analysis',
-      component: Analysis
+      component: Analysis,
     },
-  ]
+  ],
 });

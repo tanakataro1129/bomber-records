@@ -1,4 +1,4 @@
-enum Victory {
+export enum Victory {
     Unknown,
     Win,
     Lose,

@@ -1,4 +1,6 @@
-const _girls: Girl[] = [
+import { Girl, Role } from '@/scripts/girl/girl';
+
+export const _girls: Girl[] = [
     new Girl('Shiro', Role.Bombmer),
     new Girl('Kuro', Role.Bombmer),
     new Girl('Shiori', Role.Bombmer),

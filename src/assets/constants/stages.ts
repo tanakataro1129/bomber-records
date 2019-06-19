@@ -1,4 +1,6 @@
-const _stages: Stage[] = [
+import { Stage, BaseStage } from './../../scripts/record/stage';
+
+export const _stages: Stage[] = [
     new Stage(BaseStage.BomTown, '1'),
     new Stage(BaseStage.BomTown, '2'),
     new Stage(BaseStage.BomTown, '2.1'),

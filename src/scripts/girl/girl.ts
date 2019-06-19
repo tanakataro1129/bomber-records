@@ -1,6 +1,6 @@
-class Girl {
-    name: string;
-    role: Role;
+export class Girl {
+    public name: string;
+    public role: Role;
 
     constructor(name: string, role: Role) {
         this.name = name;
@@ -8,7 +8,7 @@ class Girl {
     }
 }
 
-enum Role {
+export enum Role {
     Bombmer,
     Ataccker,
     Shooter,

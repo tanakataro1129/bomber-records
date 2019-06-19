@@ -1,4 +1,6 @@
-const _player_ranks = [
+import { PlayerRank, RankClass, RankLevel } from '@/scripts/record/player_rank';
+
+export const _player_ranks = [
     new PlayerRank(RankClass.Beginner, RankLevel.C),
     new PlayerRank(RankClass.Beginner, RankLevel.B),
     new PlayerRank(RankClass.Beginner, RankLevel.A),
@@ -17,4 +19,4 @@ const _player_ranks = [
     new PlayerRank(RankClass.Master, RankLevel.C),
     new PlayerRank(RankClass.Master, RankLevel.B),
     new PlayerRank(RankClass.Master, RankLevel.A),
-]
+];
