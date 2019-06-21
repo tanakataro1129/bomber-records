@@ -1,8 +1,16 @@
 <template>
-
-  <v-container>
-    <h1 class="headline">[[Home]]</h1>
-    Content is coming to this mobile app very soon!
-  </v-container>
-
+  <RecordList :records="this.$store.state.records"></RecordList>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import RecordList from "./RecordList.vue";
+import { JsonFileRecordReader } from "../scripts/io/file-reader";
+
+@Component({
+  components: {
+    RecordList
+  }
+})
+export default class Home extends Vue {}
+</script>

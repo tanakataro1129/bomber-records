@@ -6,16 +6,20 @@ export class Stage {
         this.base = base;
         this.type = type;
     }
+
+    toString() {
+        return this.base + this.type;
+    }
 }
 
 export enum BaseStage {
-    BomTown,
-    PanicIsland,
-    CyberSpace,
-    QMABomTown,
-    HalloweenTown,
-    ChristmasTown,
-    TheKAC8thQualifier,
-    TheKAC8thFinals,
-    CastleOfAquaBlue,
+    BomTown = 'BomTown',
+    PanicIsland = 'PanicIsland',
+    CyberSpace = 'CyberSpace',
+    QMABomTown = 'QMABomTown',
+    HalloweenTown = 'HalloweenTown',
+    ChristmasTown = 'ChristmasTown',
+    TheKAC8thQualifier = 'TheKAC8thQualifier',
+    TheKAC8thFinals = 'TheKAC8thFinals',
+    CastleOfAquaBlue = 'CastleOfAquaBlue',
 }

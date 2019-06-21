@@ -6,21 +6,25 @@ export class PlayerRank {
         this.rankClass = (cls) ? cls : RankClass.Unknown;
         this.rankLevel = (lv) ? lv : RankLevel.Unknown;
     }
+
+    toString() {
+        return this.rankClass + this.rankLevel
+    }
 }
 
 export enum RankClass {
-    Unknown,
-    Beginner,
-    Rookie,
-    Regular,
-    Star,
-    SuperStar,
-    Master,
+    Unknown = '??????',
+    Beginner = 'Beginner',
+    Rookie = 'Rookie',
+    Regular = 'Regular',
+    Star = 'Star',
+    SuperStar = 'SuperStar',
+    Master = 'Master',
 }
 
 export enum RankLevel {
-    Unknown,
-    C,
-    B,
-    A,
+    Unknown = '?',
+    C = 'C',
+    B = 'B',
+    A = 'A',
 }

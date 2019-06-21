@@ -11,6 +11,7 @@ export default new Vuex.Store({
     stages: _stages,
     girls: _girls,
     player_ranks: _player_ranks,
+    records: []
   },
   mutations: {
 

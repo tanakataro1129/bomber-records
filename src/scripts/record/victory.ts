@@ -1,6 +1,6 @@
 export enum Victory {
-    Unknown,
-    Win,
-    Lose,
-    Draw,
+    Unknown = '????',
+    Win = 'WIN',
+    Lose = 'LOSE',
+    Draw = 'DRAW',
 }

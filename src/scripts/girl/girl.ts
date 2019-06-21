@@ -6,11 +6,15 @@ export class Girl {
         this.name = name;
         this.role = role;
     }
+
+    toString() {
+        return this.name;
+    }
 }
 
 export enum Role {
-    Bombmer,
-    Ataccker,
-    Shooter,
-    Blocker,
+    Bombmer = 'Bombmer',
+    Ataccker = 'Ataccker',
+    Shooter = 'Shooter',
+    Blocker = 'Blocker',
 }
