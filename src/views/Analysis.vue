@@ -1,8 +1,16 @@
 <template>
-
-  <v-container>
-    <h1 class="headline">[[Analysis]]</h1>
-    Content is coming to this mobile app very soon!
-  </v-container>
-
+  <UsageRate></UsageRate>
 </template>
+
+<script lang="ts">
+import { Component, Vue } from "vue-property-decorator";
+import UsageRate from "./charts/UsageRate.vue";
+import { JsonFileRecordReader } from "../scripts/io/file-reader";
+
+@Component({
+  components: {
+    UsageRate
+  }
+})
+export default class Analysis extends Vue {}
+</script>
