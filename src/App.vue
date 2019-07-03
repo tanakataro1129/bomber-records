@@ -26,26 +26,6 @@ import { Victory } from "./scripts/record/victory";
 export default class extends Vue {
   mounted() {
     var records = this.$store.state.records;
-    records.push(
-      new WarRecord(
-        new Date(),
-        new Date(),
-        this.$store.state.girls[0],
-        this.$store.state.stages[0],
-        this.$store.state.player_ranks[0],
-        Victory.Win
-      )
-    );
-    records.push(
-      new WarRecord(
-        new Date(),
-        new Date(),
-        this.$store.state.girls[1],
-        this.$store.state.stages[1],
-        this.$store.state.player_ranks[1],
-        Victory.Win
-      )
-    );
   }
 }
 </script>

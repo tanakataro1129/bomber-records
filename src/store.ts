@@ -3,6 +3,7 @@ import Vuex from 'vuex';
 import { _stages } from './assets/constants/stages';
 import { _girls } from './assets/constants/girls';
 import { _player_ranks } from './assets/constants/player_ranks';
+import { createDummy } from './scripts/dummy-record';
 
 Vue.use(Vuex);
 
@@ -11,7 +12,7 @@ export default new Vuex.Store({
     stages: _stages,
     girls: _girls,
     player_ranks: _player_ranks,
-    records: []
+    records: createDummy(1000)
   },
   mutations: {
 
