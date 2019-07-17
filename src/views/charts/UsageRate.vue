@@ -10,7 +10,7 @@ export default {
       Object.entries(GirlName).forEach(([key, value]) => {
         usage[key] = 0;
       });
-      this.$store.state.records.forEach(record => {
+      this.$store.state.record_manager.selectAll().forEach(record => {
         usage[record.charactor.name] += 1;
       });
       return usage;
@@ -48,7 +48,8 @@ export default {
     var options = {
       title: {
         display: true,
-        text: "Pie chart"
+        responsive: true,
+        text: "Usage Rate"
       }
     };
     this.renderChart(chartData, options);

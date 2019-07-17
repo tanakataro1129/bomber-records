@@ -1,5 +1,5 @@
 <template>
-  <RecordList :records="this.$store.state.records"></RecordList>
+  <RecordList :records="this.$store.state.record_manager.LatestN(10)"></RecordList>
 </template>
 
 <script lang="ts">

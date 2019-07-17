@@ -1,3 +1,4 @@
+import { DummyRecordManager } from './scripts/io/dummy-record-manager';
 import Vue from 'vue';
 import Vuex from 'vuex';
 import { _stages } from './assets/constants/stages';
@@ -12,7 +13,7 @@ export default new Vuex.Store({
     stages: _stages,
     girls: _girls,
     player_ranks: _player_ranks,
-    records: createDummy(1000)
+    record_manager: new DummyRecordManager(1000)
   },
   mutations: {
 
