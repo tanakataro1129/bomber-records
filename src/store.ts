@@ -1,18 +1,17 @@
 import { DummyRecordManager } from './scripts/io/dummy-record-manager';
 import Vue from 'vue';
 import Vuex from 'vuex';
-import { _stages } from './assets/constants/stages';
-import { _girls } from './assets/constants/girls';
-import { _player_ranks } from './assets/constants/player_ranks';
-import { createDummy } from './scripts/dummy-record';
+import { Stages } from './scripts/record/stage';
+import { Girls } from './scripts/girl/girl';
+import { PlayerRanks } from './scripts/record/player_rank';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
-    stages: _stages,
-    girls: _girls,
-    player_ranks: _player_ranks,
+    stages: Stages.all(),
+    girls: Girls.all(),
+    player_ranks: PlayerRanks.all(),
     record_manager: new DummyRecordManager(1000)
   },
   mutations: {
