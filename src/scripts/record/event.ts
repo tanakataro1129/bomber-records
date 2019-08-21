@@ -22,13 +22,16 @@ class BomberEvent {
 }
 
 export class Events {
+    public static readonly Paradise = new BomberEvent(
+        "Paradise", new Date('2019/8/19'), new Date('2019/8/29'),
+        [Stages.SaintRuin1, Stages.BomTown3_1, Stages.PanicIsland3, Stages.CyberSpace4]);
     public static readonly IncreaseThanksgiving = new BomberEvent(
         "Increase Thanksgiving", new Date('2019/7/11'), new Date('2019/8/6'),
         [Stages.PanicIsland1, Stages.PanicIsland2_1, Stages.PanicIsland3, Stages.PanicIsland4]);
 
     public static all(): BomberEvent[] {
         return [
-            this.IncreaseThanksgiving
+            this.IncreaseThanksgiving, this.Paradise,
         ];
     }
 }

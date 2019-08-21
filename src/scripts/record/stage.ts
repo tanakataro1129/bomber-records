@@ -22,6 +22,7 @@ enum BaseStage {
     TheKAC8thQualifier = 'TheKAC8thQualifier',
     TheKAC8thFinals = 'TheKAC8thFinals',
     CastleOfAquaBlue = 'CastleOfAquaBlue',
+    SaintRuin = 'SaintRuin',
 }
 
 // should i use database or csv?
@@ -30,7 +31,9 @@ export class Stages {
     public static readonly BomTown2 = new Stage(BaseStage.BomTown, '2');
     public static readonly BomTown2_1 = new Stage(BaseStage.BomTown, '2.1');
     public static readonly BomTown3 = new Stage(BaseStage.BomTown, '3');
+    public static readonly BomTown3_1 = new Stage(BaseStage.BomTown, '3.1');
     public static readonly BomTown4 = new Stage(BaseStage.BomTown, '4');
+    public static readonly BomTown4_1 = new Stage(BaseStage.BomTown, '4.1');
     public static readonly BomTown5 = new Stage(BaseStage.BomTown, '5');
     public static readonly PanicIsland1 = new Stage(BaseStage.PanicIsland, '1');
     public static readonly PanicIsland2 = new Stage(BaseStage.PanicIsland, '2');
@@ -50,16 +53,18 @@ export class Stages {
     public static readonly CastleOfAquaBlue1 = new Stage(BaseStage.CastleOfAquaBlue, '1');
     public static readonly CastleOfAquaBlue2 = new Stage(BaseStage.CastleOfAquaBlue, '2');
     public static readonly CastleOfAquaBlue3 = new Stage(BaseStage.CastleOfAquaBlue, '3');
+    public static readonly SaintRuin1 = new Stage(BaseStage.SaintRuin, '1');
 
     public static all(): Stage[] {
         // bad...
         return [
-            this.BomTown1, this.BomTown2, this.BomTown2_1, this.BomTown3, this.BomTown4, this.BomTown5,
+            this.BomTown1, this.BomTown2, this.BomTown2_1, this.BomTown3, this.BomTown3_1, this.BomTown4, this.BomTown4_1, this.BomTown5,
             this.PanicIsland1, this.PanicIsland2, this.PanicIsland2_1, this.PanicIsland3, this.PanicIsland4,
             this.CyberSpace2, this.CyberSpace3, this.CyberSpace4,
             this.QMABomTown, this.HalloweenTown1, this.HalloweenTown2,
             this.ChristmasTown1, this.ChristmasTown2, this.TheKAC8thQualifier, this.TheKAC8thFinals,
-            this.CastleOfAquaBlue1, this.CastleOfAquaBlue2, this.CastleOfAquaBlue3
+            this.CastleOfAquaBlue1, this.CastleOfAquaBlue2, this.CastleOfAquaBlue3,
+            this.SaintRuin1,
         ]
     }
 }
