@@ -31,9 +31,6 @@ import * as Moment from "moment";
 
 @Component({
   computed: {
-    formattedPlayDate: function() {
-      return this.playdate ? new Date(this.playdate).toDateString() : "";
-    },
     mode: function() {
       return this.editRecord ? "Edit" : "Add";
     }
