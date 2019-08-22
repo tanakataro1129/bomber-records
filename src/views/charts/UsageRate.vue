@@ -1,58 +1,50 @@
-<script lang="ts">
-import { Pie } from "vue-chartjs";
-import { GirlName } from "../../scripts/girl/girl";
+<template>
+  <div id="contents">
+    <GChart type="PieChart" :data="chartData" :options="chartOptions"></GChart>
+  </div>
+</template>
 
-export default {
-  extends: Pie,
+<script lang="ts">
+import { Component, Vue, Prop } from "vue-property-decorator";
+import { WarRecord } from "../../scripts/record/record";
+import { GChart } from "vue-google-charts";
+
+@Component({
+  components: {
+    GChart
+  },
+
   computed: {
     usage: function() {
+      var records = this.$store.state.record_manager.period(
+        new Date(this.lower_date),
+        new Date(this.upper_date)
+      );
       var usage = {};
-      Object.entries(GirlName).forEach(([key, value]) => {
-        usage[key] = 0;
-      });
-      this.$store.state.record_manager.selectAll().forEach(record => {
-        usage[record.charactor.name] += 1;
-      });
+      records.forEach(r =>
+        usage[r.charactor]
+          ? (usage[r.charactor] += 1)
+          : (usage[r.charactor] = 1)
+      );
       return usage;
     },
-    girlColors: function() {
-      var colors = {};
-      colors[GirlName.Shiro] = "rgba(0, 204, 204, 0.5)";
-      colors[GirlName.Kuro] = "rgba(0, 0, 128, 0.5)";
-      colors[GirlName.Shiori] = "rgba(255, 0, 0, 0.5)";
-      colors[GirlName.Gray] = "rgba(128, 128, 128, 0.5)";
-      colors[GirlName.Oran] = "rgba(255, 153, 0, 0.5)";
-      colors[GirlName.Urushi] = "rgba(221, 0, 0, 0.5)";
-      colors[GirlName.Sepia] = "rgba(153, 51, 0, 0.5)";
-      colors[GirlName.Emera] = "rgba(68, 255, 153, 0.5)";
-      colors[GirlName.Puple] = "rgba(128, 0, 128, 0.5)";
-      colors[GirlName.Tsugaru] = "rgba(153, 204, 0, 0.5)";
-      colors[GirlName.Momoko] = "rgba(255, 153, 204, 0.5)";
-      colors[GirlName.Aqua] = "rgba(0, 0, 255, 0.5)";
-      colors[GirlName.GrimAloe] = "rgba(51, 51, 51, 0.5)";
-      return colors;
+
+    chartData: function() {
+      var data = [];
+      data.push(["Charactor", "Use"]);
+      Object.keys(this.usage).forEach(k => data.push([k, this.usage[k]]));
+      return data;
+    },
+
+    chartOptions: function() {
+      return {
+        title: "Usage"
+      };
     }
-  },
-  mounted() {
-    var chartData = {
-      labels: Object.keys(this.usage),
-      datasets: [
-        {
-          backgroundColor: Object.keys(this.usage).map(
-            key => this.girlColors[key]
-          ),
-          data: Object.keys(this.usage).map(key => this.usage[key])
-        }
-      ]
-    };
-    var options = {
-      title: {
-        display: true,
-        responsive: true,
-        text: "Usage Rate"
-      }
-    };
-    this.renderChart(chartData, options);
   }
-};
+})
+export default class Google extends Vue {
+  @Prop() lower_date: Date;
+  @Prop() upper_date: Date;
+}
 </script>
