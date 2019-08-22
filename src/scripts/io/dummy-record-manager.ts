@@ -13,10 +13,11 @@ var girls = Girls.all();
 var stages = [Stages.CastleOfAquaBlue1, Stages.CastleOfAquaBlue2, Stages.CastleOfAquaBlue3];
 var ranks = [PlayerRanks.SuperStarC, PlayerRanks.SuperStarB, PlayerRanks.SuperStarA];
 
-export class DummyRecordManager implements RecordManager {
+export class DummyRecordManager extends RecordManager {
     records: WarRecord[];
 
     constructor(n: number) {
+        super();
         this.records = DummyRecordManager.createDummy(n);
         this.sort();
     }
